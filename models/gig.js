@@ -1,5 +1,6 @@
 const Sequelize = require('sequelize');
 const db = require('../config/database');
+const { serialize } = require('mongodb');
 
 const Gig = db.define('gig', {
     title: {
