@@ -1,10 +1,15 @@
-require('dotenv').config();
 const express = require('express');
 const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
 const path = require('path');
 
 const app = express();
+app.use(express.json());
+
+const dotenv = require('dotenv');
+dotenv.config();
+
+
 
 // connected DB
 const db = require('./config/database');
